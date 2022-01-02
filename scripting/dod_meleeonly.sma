@@ -12,11 +12,11 @@ new g_pCvarMeleeOnly
 
 public plugin_init()
 {
-	register_plugin("Melee Only", "0.1", "Fysiks")
+	register_plugin("Melee Only", "0.2", "Fysiks")
 	
 	register_clcmd("say ammo", "stripBullets")
 	g_pCvarMeleeOnly = register_cvar("melee_only_enable", "1")
-	set_pcvar_num(g_pCvarMeleeOnly, 1) // Force the melee to be enabled at the begining of the map
+	set_pcvar_num(g_pCvarMeleeOnly, 0) // Force the melee to be enabled at the begining of the map
 	RegisterHam(Ham_Spawn,"player","ham_player_spawn",1)
 }
 
